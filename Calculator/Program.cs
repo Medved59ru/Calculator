@@ -7,7 +7,7 @@ namespace Calculator
         static void Main(string[] args)
         {
             Console.Title="Калькулятор";
-            Calculations regime = new Calculations();
+            ModeSelector regime = new ModeSelector();
             regime.GetFromConsole();
            
 

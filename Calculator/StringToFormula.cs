@@ -104,17 +104,26 @@ namespace Calculator
             List<string> tokens = new List<string>();
             StringBuilder sb = new StringBuilder();
 
-            foreach (char c in expression.Replace(" ", string.Empty))
+            string str = expression.Replace(" ", string.Empty);
+            for (int i = 0; i < str.Length; i++)
             {
+                char c = str[i];
                 if (operators.IndexOf(c) >= 0)
                 {
-                    if ((sb.Length > 0))
+                    if (c == '-')
                     {
-                        tokens.Add(sb.ToString());
-                        sb.Length = 0;
+                        sb.Append(c);
                     }
+                    else
+                    {
+                        if ((sb.Length > 0))
+                        {
+                            tokens.Add(sb.ToString());
+                            sb.Length = 0;
+                        }
+                        tokens.Add(c.ToString());
 
-                    tokens.Add(c.ToString());
+                    }
                 }
                 else
                 {

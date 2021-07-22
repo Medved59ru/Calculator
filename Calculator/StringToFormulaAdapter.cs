@@ -17,7 +17,7 @@ namespace Calculator
                 result = expression.Eval(formula);
                 if (Double.IsInfinity(result))
                 {
-                    stringResult = " ОШИБКА ";
+                    stringResult = " ОШИБКА ДЕЛЕНИЕ НА НОЛЬ ";
                 }
                 else
                 {

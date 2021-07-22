@@ -9,7 +9,7 @@ namespace CalculatorTest
         [TestMethod]
         public void StringToFormulaTests()
         {
-            string[] initialArray = { "1+2*3", "(1-2*3)+5","1/0","0091837,1344'FSD"};
+            string[] initialArray = { "1+2*3", "-5/5","1/0","0091837,1344'FSD"};
             string[] resultArray = new string[initialArray.Length];
 
             for(int i = 0; i<initialArray.Length; i++)
@@ -18,8 +18,8 @@ namespace CalculatorTest
             }
 
             Assert.AreEqual("7", resultArray[0]);
-            Assert.AreEqual("0", resultArray[1]);
-            Assert.AreEqual(" ÎØÈÁÊÀ ", resultArray[2]);
+            Assert.AreEqual("-1", resultArray[1]);
+            Assert.AreEqual(" ÎØÈÁÊÀ ÄÅËÅÍÈÅ ÍÀ ÍÎËÜ ", resultArray[2]);
             Assert.AreEqual(" ÎØÈÁÊÀ ", resultArray[3]);
         }
     }

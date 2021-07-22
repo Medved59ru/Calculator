@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator
 {
-   public class Calculations
+   public class ModeSelector
    {
         public void GetFromConsole()
         {
