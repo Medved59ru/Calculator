@@ -110,7 +110,11 @@ namespace Calculator
                 char c = str[i];
                 if (operators.IndexOf(c) >= 0)
                 {
-                    if (c == '-')
+                    if (i == 0 && c == '-')
+                    {
+                        sb.Append(c);
+                    }
+                    else if (i > 0 && c == '-' && !Char.IsDigit(str[i - 1]))
                     {
                         sb.Append(c);
                     }
